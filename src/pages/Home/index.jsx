@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { HomeName } from './styles';
 
 const Home = () => {
     return (
-        <div>
+        <HomeName>
             Home
-        </div>
+        </HomeName>
     )
 }
 
