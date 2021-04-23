@@ -1,0 +1,23 @@
+import styled from 'styled-components';
+
+const HomeContainer = styled.div`
+  background-image: url("../../../../assets/home-background.svg"), linear-gradient(180deg, ${props => props.theme.palette.background.secondary} 0%, ${props => props.theme.palette.background.primary}  100%);;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+`;
+
+const StyledHomeHeader = styled.div`
+
+`;
+
+const StyledHomeContent = styled.div`
+
+`;
+
+export {
+  HomeContainer,
+  StyledHomeHeader,
+  StyledHomeContent
+};

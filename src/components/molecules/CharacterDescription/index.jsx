@@ -1,0 +1,33 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Text from '../../atoms/Text';
+import { CharacterContainer, Subtitle } from './styles';
+
+const CharacterDecription = ({
+  title,
+  characterDescription
+}) => {
+  return (
+    <CharacterContainer>
+      <Text
+        text={title}
+        color="tertiary"
+        size="tiny"
+      />
+      <Subtitle>
+        <Text
+          text={characterDescription}
+          color="grey"
+          size="mediumSmall"
+        />
+      </Subtitle>
+    </CharacterContainer>
+  )
+}
+
+CharacterDecription.propTypes = {
+  title: PropTypes.string,
+  characterDescription: PropTypes.string
+}
+
+export default CharacterDecription;
