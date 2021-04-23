@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
 import { StyledCard, Image, Subtitle } from './styles';
 
-const CardImage = ({
+const SheetImage = ({
   image,
   name,
   type
@@ -27,10 +27,10 @@ const CardImage = ({
   )
 }
 
-CardImage.propTypes = {
+SheetImage.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string
 };
 
-export default CardImage;
+export default SheetImage;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CardContainer = styled.div`
+const SheetContainer = styled.div`
   display: flex;
   flex-direction: row;
 `;
@@ -19,7 +19,7 @@ const DescriptionBackground = styled.div`
 `;
 
 export {
-  CardContainer,
+  SheetContainer,
   ImageBackground,
   DescriptionBackground
 };

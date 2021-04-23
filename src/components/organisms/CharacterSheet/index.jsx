@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
-import CardImage from '../../molecules/CardImage';
+import SheetImage from '../../molecules/SheetImage';
 import CharacterDecription from '../../molecules/CharacterDescription';
 import LocationDescription from '../../molecules/LocationDescription';
-import { CardContainer, ImageBackground, DescriptionBackground } from './styles';
+import { SheetContainer, ImageBackground, DescriptionBackground } from './styles';
 
-const CharacterCard = ({
+const CharacterSheet = ({
   onClose,
   characterName,
   characterType,
@@ -22,7 +22,7 @@ const CharacterCard = ({
   locationResidents
 }) => {
   return (
-    <CardContainer>
+    <SheetContainer>
       <ImageBackground>
         <Button 
           label="Close"
@@ -31,7 +31,7 @@ const CharacterCard = ({
           disabled={false}
           onClick={onClose}
         />
-        <CardImage 
+        <SheetImage 
           image={image}
           name={characterName}
           type={characterType}
@@ -57,11 +57,11 @@ const CharacterCard = ({
           locationResidents={locationResidents}
         />
       </DescriptionBackground>
-    </CardContainer>
+    </SheetContainer>
   )
 }
 
-CharacterCard.propTypes = {
+CharacterSheet.propTypes = {
   onClose: PropTypes.func,
   characterName: PropTypes.string,
   characterType: PropTypes.string,
@@ -77,4 +77,4 @@ CharacterCard.propTypes = {
   locationResidents: PropTypes.string
 }
 
-export default CharacterCard;
+export default CharacterSheet;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CharacterCard from '../../organisms/CharacterCard';
+import CharacterSheet from '../../organisms/CharacterSheet';
 
 const CharacterModal = ({
   onClose,
@@ -18,7 +18,7 @@ const CharacterModal = ({
   locationResidents
 }) => {
   return (
-    <CharacterCard
+    <CharacterSheet
       onClose={onClose}
       characterName={characterName}
       characterType={characterType}
