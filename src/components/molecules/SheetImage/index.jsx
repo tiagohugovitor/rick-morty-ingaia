@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
-import { StyledCard, Image, Subtitle } from './styles';
+import { StyledCard, Image, Subtitle, Content } from './styles';
 
 const SheetImage = ({
   image,
@@ -10,19 +10,21 @@ const SheetImage = ({
 }) => {
   return (
     <StyledCard>
-      <Image src={image} />
-      <Subtitle>
-        <Text
-          text={name}
-          color="white"
-          size="large"
-        />
-        <Text
-          text={type}
-          color="white"
-          size="tiny"
-        />
-      </Subtitle>
+      <Content>
+        <Image src={image} />
+        <Subtitle>
+          <Text
+            text={name}
+            color="white"
+            size="large"
+          />
+          <Text
+            text={type}
+            color="white"
+            size="tiny"
+          />
+        </Subtitle>
+      </Content>
     </StyledCard>
   )
 }

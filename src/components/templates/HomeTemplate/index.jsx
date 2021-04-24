@@ -21,7 +21,7 @@ const HomeTemplate = ({
 
   return (
     <HomeContainer
-      loading={loading}
+      loading={loading ? 'true' : 'false'}
     >
       <StyledHomeHeader>
         <HomeHeader

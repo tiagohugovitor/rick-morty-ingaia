@@ -1,6 +1,7 @@
 import React, { forwardRef, useCallback, useState } from 'react';
 import { Dialog, DialogContent } from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
+import { StyledDialogContent } from './styles';
 
 const Transition = forwardRef((props, ref) => (
   <Slide direction="up" ref={ref} {...props} />
@@ -30,12 +31,12 @@ const withModal = WrappedComponent => props => {
   } = modalData;
 
   const dialogBody = modalData.body ? (
-    <DialogContent>
+    <StyledDialogContent>
       <Body
         closeModal={handleClose}
         {...bodyProps}
       />
-    </DialogContent>
+    </StyledDialogContent>
   ) : (
     <>
     </>

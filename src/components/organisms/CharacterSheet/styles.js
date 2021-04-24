@@ -6,10 +6,20 @@ const SheetContainer = styled.div`
 `;
 
 const ImageBackground = styled.div`
+  position: absolute;
+  background-image: url(${props => props.image});
+  background-size: cover;
+  filter: blur(15px);
+  width: 100%;
+  height: 100%;
+`;
+
+const ImageContent = styled.div`
+  position: relative;
+  width: 40%;
+  margin: 20px;
   display: flex;
   flex-direction: column;
-  background-color: red;
-  width: 40%;
 `;
 
 const DescriptionBackground = styled.div`
@@ -18,8 +28,17 @@ const DescriptionBackground = styled.div`
   width: 60%;
 `;
 
+const Content = styled.div`
+  z-index: 100;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`
+
 export {
   SheetContainer,
   ImageBackground,
-  DescriptionBackground
+  DescriptionBackground,
+  ImageContent,
+  Content
 };

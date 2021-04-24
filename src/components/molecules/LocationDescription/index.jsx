@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
-import { LocationContainer, StyledLocationDescription, ResidentsDecription, ResidentsIcon } from './styles';
+import ResidentsIcon from '../../../assets/residents-icon.svg'
+import { LocationContainer, StyledLocationDescription, ResidentsDecription, StyledResidentsIcon } from './styles';
 
 const LocationDescription = ({
   title,
@@ -36,9 +37,9 @@ const LocationDescription = ({
       </StyledLocationDescription>
       {!!locationResidents && (
         <ResidentsDecription>
-          <ResidentsIcon src="../../../../public/assets/residents-icon" />
+          <StyledResidentsIcon src={ResidentsIcon} />
           <Text
-            text={locationResidents}
+            text={`${locationResidents} residents`}
             color="secondary"
             size="small"
           />

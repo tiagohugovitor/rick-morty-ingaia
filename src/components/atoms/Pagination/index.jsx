@@ -10,7 +10,7 @@ const Pagination = ({
   return (
     <MaterialPagination
       color="primary"
-      classes
+      //classes
       count={pages}
       onChange={onChangePage}
       page={page}

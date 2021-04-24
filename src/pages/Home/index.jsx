@@ -23,7 +23,7 @@ const Home = ({
     if (newPages !== pagination.pages) {
       setPagination(state => ({ ...state, pages: newPages }))
     }
-  }, [data]);
+  }, [data, pagination.pages]);
 
   const onSearch = (newPage, filter) => {
     setPagination(state => ({ ...state, page: newPage }));

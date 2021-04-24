@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@material-ui/core';
+import Button from '../../atoms/Button';
 import SheetImage from '../../molecules/SheetImage';
 import CharacterDecription from '../../molecules/CharacterDescription';
 import LocationDescription from '../../molecules/LocationDescription';
-import { SheetContainer, ImageBackground, DescriptionBackground } from './styles';
+import { SheetContainer, ImageBackground, DescriptionBackground, ImageContent, Content } from './styles';
 
 const CharacterSheet = ({
   onClose,
@@ -23,33 +23,38 @@ const CharacterSheet = ({
 }) => {
   return (
     <SheetContainer>
-      <ImageBackground>
-        <Button 
-          label="Close"
-          id="close-button"
-          name="close-button"
-          disabled={false}
-          onClick={onClose}
-        />
-        <SheetImage 
+      <ImageContent>
+        <ImageBackground
           image={image}
-          name={characterName}
-          type={characterType}
         />
-      </ImageBackground>
+        <Content>
+          <Button
+            label="Close"
+            id="close-button"
+            name="close-button"
+            disabled={false}
+            onClick={onClose}
+          />
+          <SheetImage
+            image={image}
+            name={characterName}
+            type={characterType}
+          />
+        </Content>
+      </ImageContent>
       <DescriptionBackground>
-        <CharacterDecription 
+        <CharacterDecription
           title="ABOUT"
           characterDescription={characterDescription}
         />
-        <LocationDescription 
+        <LocationDescription
           title="ORIGIN"
           locationType={originType}
           locationName={originName}
           locationSubtitle={originSubtitle}
           locationResidents={originResidents}
         />
-        <LocationDescription 
+        <LocationDescription
           title="LOCATION"
           locationType={locationType}
           locationName={locationName}
