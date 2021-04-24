@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HomeHeader from '../../organisms/HomeHeader';
-import HomeContent from '../../organisms/HomeContent';
+import CharactersList from '../../organisms/CharactersList';
 import { HomeContainer, StyledHomeHeader, StyledHomeContent } from './styles';
 
 const HomeTemplate = ({
   onChange,
   onClick,
   value,
+  searchResult
 }) => {
 
-  const hasContent = () => false
+  const hasContent = () => !!searchResult?.length;
   
   return (
     <HomeContainer>
@@ -23,7 +24,9 @@ const HomeTemplate = ({
       </StyledHomeHeader>
       <StyledHomeContent>
         {hasContent() && (
-          <HomeContent />
+          <CharactersList
+            characters={searchResult}
+          />
         )}
       </StyledHomeContent>
     </HomeContainer>
@@ -33,7 +36,8 @@ const HomeTemplate = ({
 HomeTemplate.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
-  value: PropTypes.string
+  value: PropTypes.string,
+  searchResult: PropTypes.array
 }
 
 export default HomeTemplate;

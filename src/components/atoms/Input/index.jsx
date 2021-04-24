@@ -15,7 +15,7 @@ const Input = ({
       id={id}
       type={type}
       name={name}
-      onChange={onChange}
+      onChange={(event) => onChange(event.target.value)}
       value={value}
       placeholder={placeholder}
     />

@@ -13,7 +13,7 @@ const StyledHomeHeader = styled.div`
 `;
 
 const StyledHomeContent = styled.div`
-
+  margin-top: 100px;
 `;
 
 export {

@@ -7,24 +7,26 @@ const CharacterCard = ({
   characterName,
   characterType
 }) => {
-  <CardContainer>
-    <Image />
-    <Subtitle>
-      <Text 
-        text={characterName}
-        color="white"
-        size="large"
-      />
-      <Text 
-        text={characterType}
-        color="white"
-        size="tiny"
-      />
-    </Subtitle>
-  </CardContainer>
+  return (
+    <CardContainer>
+      <Image />
+      <Subtitle>
+        <Text
+          text={characterName}
+          color="white"
+          size="large"
+        />
+        <Text
+          text={characterType}
+          color="white"
+          size="tiny"
+        />
+      </Subtitle>
+    </CardContainer>
+  )
 }
 
-CharacterCard.propTypes = { 
+CharacterCard.propTypes = {
   characterName: PropTypes.string,
   characterType: PropTypes.string
 }
