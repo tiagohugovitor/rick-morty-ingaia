@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Pagination from '../../atoms/Pagination';
 import HomeHeader from '../../organisms/HomeHeader';
 import CharactersList from '../../organisms/CharactersList';
 import { HomeContainer, StyledHomeHeader, StyledHomeContent } from './styles';
@@ -10,11 +11,14 @@ const HomeTemplate = ({
   value,
   searchResult,
   onClickCard,
-  loading
+  loading,
+  page,
+  pages,
+  onChangePage
 }) => {
 
   const hasContent = () => !!searchResult?.length;
-  
+
   return (
     <HomeContainer
       loading={loading}
@@ -28,10 +32,17 @@ const HomeTemplate = ({
       </StyledHomeHeader>
       <StyledHomeContent>
         {hasContent() && (
-          <CharactersList
-            onClickCard={onClickCard}
-            characters={searchResult}
-          />
+          <>
+            <CharactersList
+              onClickCard={onClickCard}
+              characters={searchResult}
+            />
+            <Pagination
+              page={page}
+              pages={pages}
+              onChangePage={onChangePage}
+            />
+          </>
         )}
       </StyledHomeContent>
     </HomeContainer>
@@ -44,7 +55,10 @@ HomeTemplate.propTypes = {
   value: PropTypes.string,
   searchResult: PropTypes.array,
   onClickCard: PropTypes.func,
-  loading: PropTypes. bool
+  loading: PropTypes.bool,
+  page: PropTypes.number,
+  pages: PropTypes.number,
+  onChangePage: PropTypes.func
 }
 
 export default HomeTemplate;
