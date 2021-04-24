@@ -6,25 +6,30 @@ import { HomeContainer, StyledHomeHeader, StyledHomeContent } from './styles';
 
 const HomeTemplate = ({
   onChange,
-  onClick,
+  onClickSearch,
   value,
-  searchResult
+  searchResult,
+  onClickCard,
+  loading
 }) => {
 
   const hasContent = () => !!searchResult?.length;
   
   return (
-    <HomeContainer>
+    <HomeContainer
+      loading={loading}
+    >
       <StyledHomeHeader>
         <HomeHeader
           onChange={onChange}
-          onClick={onClick}
+          onClick={onClickSearch}
           value={value}
         />
       </StyledHomeHeader>
       <StyledHomeContent>
         {hasContent() && (
           <CharactersList
+            onClickCard={onClickCard}
             characters={searchResult}
           />
         )}
@@ -35,9 +40,11 @@ const HomeTemplate = ({
 
 HomeTemplate.propTypes = {
   onChange: PropTypes.func,
-  onClick: PropTypes.func,
+  onClickSearch: PropTypes.func,
   value: PropTypes.string,
-  searchResult: PropTypes.array
+  searchResult: PropTypes.array,
+  onClickCard: PropTypes.func,
+  loading: PropTypes. bool
 }
 
 export default HomeTemplate;

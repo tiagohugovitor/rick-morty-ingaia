@@ -9,6 +9,7 @@ const CardContainer = styled.div`
   border: 2px solid ${props => props.theme.palette.border.primary};
   box-sizing: border-box;
   border-radius: 8px;
+  cursor: pointer;
 `;
 
 const Image = styled.img`

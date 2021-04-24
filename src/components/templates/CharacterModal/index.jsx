@@ -3,53 +3,32 @@ import PropTypes from 'prop-types';
 import CharacterSheet from '../../organisms/CharacterSheet';
 
 const CharacterModal = ({
-  onClose,
-  characterName,
-  characterType,
-  image,
-  characterDescription,
-  originType,
-  originName,
-  originSubtitle,
-  originResidents,
-  locationType,
-  locationName,
-  locationSubtitle,
-  locationResidents
+  closeModal,
+  character
 }) => {
+
   return (
     <CharacterSheet
-      onClose={onClose}
-      characterName={characterName}
-      characterType={characterType}
-      image={image}
-      characterDescription={characterDescription}
-      originType={originType}
-      originName={originName}
-      originSubtitle={originSubtitle}
-      originResidents={originResidents}
-      locationType={locationType}
-      locationName={locationName}
-      locationSubtitle={locationSubtitle}
-      locationResidents={locationResidents}
+      onClose={closeModal}
+      characterName={character?.name}
+      characterType={character?.species}
+      image={character?.image}
+      characterDescription={character?.description}
+      originType={character?.origin?.type || "Unknown Planet"}
+      originName={character?.origin?.name || "Unknown"}
+      originSubtitle={character?.origin?.dimension || "Unknown dimension"}
+      originResidents={character?.origin?.residents?.length}
+      locationType={character?.location?.type || "Unknown Planet"}
+      locationName={character?.location?.name || "Unknown"}
+      locationSubtitle={character?.location?.dimension || "Unknown dimension"}
+      locationResidents={character?.location?.residents?.length}
     />
   )
 }
 
 CharacterModal.propTypes = {
   onClose: PropTypes.func,
-  characterName: PropTypes.string,
-  characterType: PropTypes.string,
-  image: PropTypes.string,
-  characterDescription: PropTypes.string,
-  originType: PropTypes.string,
-  originName: PropTypes.string,
-  originSubtitle: PropTypes.string,
-  originResidents: PropTypes.string,
-  locationType: PropTypes.string,
-  locationName: PropTypes.string,
-  locationSubtitle: PropTypes.string,
-  locationResidents: PropTypes.string
+  character: PropTypes.object
 };
 
 export default CharacterModal;

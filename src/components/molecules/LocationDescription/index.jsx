@@ -34,14 +34,16 @@ const LocationDescription = ({
           size="medium"
         />
       </StyledLocationDescription>
-      <ResidentsDecription>
-        <ResidentsIcon src="../../../../public/assets/residents-icon"/>
-        <Text
-          text={locationResidents}
-          color="secondary"
-          size="small"
-        />
-      </ResidentsDecription>
+      {!!locationResidents && (
+        <ResidentsDecription>
+          <ResidentsIcon src="../../../../public/assets/residents-icon" />
+          <Text
+            text={locationResidents}
+            color="secondary"
+            size="small"
+          />
+        </ResidentsDecription>
+      )}
     </LocationContainer>
   )
 };
@@ -51,7 +53,7 @@ LocationDescription.propTypes = {
   locationType: PropTypes.string,
   locationName: PropTypes.string,
   locationSubtitle: PropTypes.string,
-  locationResidents: PropTypes.string
+  locationResidents: PropTypes.number
 }
 
 export default LocationDescription;

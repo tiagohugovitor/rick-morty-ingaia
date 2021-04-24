@@ -5,11 +5,15 @@ import { CardContainer, Image, Subtitle } from './styles';
 
 const CharacterCard = ({
   characterName,
-  characterType
+  characterType,
+  characterImage,
+  onClickCard
 }) => {
   return (
-    <CardContainer>
-      <Image />
+    <CardContainer
+      onClick={onClickCard}  
+    >
+      <Image src={characterImage} />
       <Subtitle>
         <Text
           text={characterName}
@@ -28,7 +32,9 @@ const CharacterCard = ({
 
 CharacterCard.propTypes = {
   characterName: PropTypes.string,
-  characterType: PropTypes.string
+  characterType: PropTypes.string,
+  characterImage: PropTypes.string,
+  onClickCard: PropTypes.func
 }
 
 export default CharacterCard;

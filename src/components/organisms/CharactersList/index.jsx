@@ -4,7 +4,8 @@ import CharacterCard from '../../molecules/CharacterCard';
 import { StyledList, StyledCharacterCard } from './styles';
 
 const CharactersList = ({
-  characters
+  characters,
+  onClickCard
 }) => {
   return (
     <StyledList>
@@ -13,8 +14,10 @@ const CharactersList = ({
           key={character.id}
         >
           <CharacterCard
+            onClickCard={() => onClickCard(character)}
             characterName={character?.name}
             characterType={character?.species}
+            characterImage={character?.image}
           />
         </StyledCharacterCard>
       ))}
@@ -23,7 +26,8 @@ const CharactersList = ({
 };
 
 CharactersList.propTypes = {
-  characters: PropTypes.array
+  characters: PropTypes.array,
+  onClickCard: PropTypes.func
 };
 
 export default CharactersList;

@@ -6,6 +6,7 @@ const HomeContainer = styled.div`
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  filter: ${props => props.loading ? 'blur(15px)' : 'none'}
 `;
 
 const StyledHomeHeader = styled.div`

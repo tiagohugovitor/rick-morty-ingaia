@@ -9,6 +9,7 @@ const theme = createMuiTheme({
       mediumSmall: '16px',
       medium: '18px',
       large: '20px',
+      huge: '24px',
       extra: '28px'
     },
     weight: {

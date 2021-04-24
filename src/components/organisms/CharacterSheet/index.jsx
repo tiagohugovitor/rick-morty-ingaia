@@ -70,7 +70,7 @@ CharacterSheet.propTypes = {
   originType: PropTypes.string,
   originName: PropTypes.string,
   originSubtitle: PropTypes.string,
-  originResidents: PropTypes.string,
+  originResidents: PropTypes.number,
   locationType: PropTypes.string,
   locationName: PropTypes.string,
   locationSubtitle: PropTypes.string,
