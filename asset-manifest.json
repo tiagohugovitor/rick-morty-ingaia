@@ -2,14 +2,14 @@
   "files": {
     "main.js": "/rick-morty-ingaia/static/js/main.20138edd.chunk.js",
     "main.js.map": "/rick-morty-ingaia/static/js/main.20138edd.chunk.js.map",
-    "runtime-main.js": "/rick-morty-ingaia/static/js/runtime-main.fa8e5d9f.js",
-    "runtime-main.js.map": "/rick-morty-ingaia/static/js/runtime-main.fa8e5d9f.js.map",
+    "runtime-main.js": "/rick-morty-ingaia/static/js/runtime-main.02d3a76e.js",
+    "runtime-main.js.map": "/rick-morty-ingaia/static/js/runtime-main.02d3a76e.js.map",
     "static/js/2.37636e89.chunk.js": "/rick-morty-ingaia/static/js/2.37636e89.chunk.js",
     "static/js/2.37636e89.chunk.js.map": "/rick-morty-ingaia/static/js/2.37636e89.chunk.js.map",
     "static/js/3.5f424f8c.chunk.js": "/rick-morty-ingaia/static/js/3.5f424f8c.chunk.js",
     "static/js/3.5f424f8c.chunk.js.map": "/rick-morty-ingaia/static/js/3.5f424f8c.chunk.js.map",
-    "static/js/4.67cc5247.chunk.js": "/rick-morty-ingaia/static/js/4.67cc5247.chunk.js",
-    "static/js/4.67cc5247.chunk.js.map": "/rick-morty-ingaia/static/js/4.67cc5247.chunk.js.map",
+    "static/js/4.8f23dde3.chunk.js": "/rick-morty-ingaia/static/js/4.8f23dde3.chunk.js",
+    "static/js/4.8f23dde3.chunk.js.map": "/rick-morty-ingaia/static/js/4.8f23dde3.chunk.js.map",
     "static/js/5.bc3544cb.chunk.js": "/rick-morty-ingaia/static/js/5.bc3544cb.chunk.js",
     "static/js/5.bc3544cb.chunk.js.map": "/rick-morty-ingaia/static/js/5.bc3544cb.chunk.js.map",
     "index.html": "/rick-morty-ingaia/index.html",
@@ -19,7 +19,7 @@
     "static/media/residents-icon.ab287e80.svg": "/rick-morty-ingaia/static/media/residents-icon.ab287e80.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fa8e5d9f.js",
+    "static/js/runtime-main.02d3a76e.js",
     "static/js/2.37636e89.chunk.js",
     "static/js/main.20138edd.chunk.js"
   ]
