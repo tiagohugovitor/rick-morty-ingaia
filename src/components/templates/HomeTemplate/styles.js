@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const HomeContainer = styled.div`
-  background-image: url("../../../../assets/home-background.svg");
+  background-image: url("../../../../rick-morty-ingaia/assets/home-background.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: auto;
