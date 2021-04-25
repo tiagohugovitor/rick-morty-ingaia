@@ -6,11 +6,24 @@ const LocationContainer = styled.div`
   flex-direction: column;  
 `;
 
-const StyledLocationDescription = styled.div`
+const StyledLocationDescriptionDesktop = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 17px;
 
+  @media(max-width: 800px) {
+    display: none;
+  }
+`;
+
+const StyledLocationDescriptionMobile = styled.div`
+  display: none;
+  flex-direction: column;
+  padding-top: 17px;
+
+  @media(max-width: 800px) {
+    display: flex;
+  }
 `;
 
 const Title = styled.div`
@@ -30,7 +43,8 @@ const StyledResidentsIcon = styled.img`
 
 export {
   LocationContainer,
-  StyledLocationDescription,
+  StyledLocationDescriptionDesktop,
+  StyledLocationDescriptionMobile,
   Title,
   ResidentsDecription,
   StyledResidentsIcon

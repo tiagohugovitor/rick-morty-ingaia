@@ -8,15 +8,17 @@ const CharacterCard = ({
   characterType,
   characterImage,
   onClickCard,
-  isSelected
+  isSelected,
+  isMiniCard
 }) => {
   return (
     <CardContainer
       onClick={onClickCard}
       selected={isSelected ? 'true' : 'false'}
+      isMiniCard={isMiniCard ? 'true' : 'false'}
     >
-      <Image src={characterImage} />
-      <Subtitle>
+      <Image src={characterImage} isMiniCard={isMiniCard ? 'true' : 'false'} />
+      <Subtitle >
         <StyledName>
           <Text
             text={characterName}
@@ -43,7 +45,9 @@ CharacterCard.propTypes = {
   characterType: PropTypes.string,
   characterImage: PropTypes.string,
   onClickCard: PropTypes.func,
-  isSelected: PropTypes.bool
+  isSelected: PropTypes.bool,
+  isMiniCard: PropTypes.bool
+
 }
 
 export default CharacterCard;

@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CloseIcon from '@material-ui/icons/Close';
 import Button from '../../atoms/Button';
 import SheetImage from '../../molecules/SheetImage';
+import CharacterCard from '../../molecules/CharacterCard';
 import CharacterDecription from '../../molecules/CharacterDescription';
 import LocationDescription from '../../molecules/LocationDescription';
-import { SheetContainer, ImageBackground, DescriptionBackground, ColorFilter, ImageContent, Content } from './styles';
+import { SheetContainerDesktop, StyledCharacterCard, ImageBackground, StyledCloseIcon, DescriptionBackground, ColorFilter, ImageContent, Content, SheetContainerMobile } from './styles';
 
 const CharacterSheet = ({
   onClose,
@@ -21,8 +23,9 @@ const CharacterSheet = ({
   locationSubtitle,
   locationResidents
 }) => {
-  return (
-    <SheetContainer>
+
+  const renderSheetDesktop = () => (
+    <SheetContainerDesktop>
       <ImageContent>
         <ImageBackground
           image={image}
@@ -65,9 +68,62 @@ const CharacterSheet = ({
           locationResidents={locationResidents}
         />
       </DescriptionBackground>
-    </SheetContainer>
+    </SheetContainerDesktop>
+  );
+
+  const renderSheetMobile = () => (
+    <SheetContainerMobile>
+      <ImageContent>
+        <ImageBackground
+          image={image}
+        />
+        <ColorFilter />
+        <Content>
+          <StyledCloseIcon onClick={onClose}>
+            <CloseIcon fontSize="large" />
+          </StyledCloseIcon>
+          <StyledCharacterCard>
+            <CharacterCard
+              characterName={characterName}
+              characterType={characterType}
+              characterImage={image}
+              isMiniCard={true}
+              onClickCard={() => { }}
+              isSelected={false}
+            />
+          </StyledCharacterCard>
+        </Content>
+      </ImageContent>
+      <DescriptionBackground>
+        <CharacterDecription
+          title="ABOUT"
+          characterDescription={characterDescription}
+        />
+        <LocationDescription
+          title="ORIGIN"
+          locationType={originType}
+          locationName={originName}
+          locationSubtitle={originSubtitle}
+          locationResidents={originResidents}
+        />
+        <LocationDescription
+          title="LOCATION"
+          locationType={locationType}
+          locationName={locationName}
+          locationSubtitle={locationSubtitle}
+          locationResidents={locationResidents}
+        />
+      </DescriptionBackground>
+    </SheetContainerMobile>
+  );
+
+  return (
+    <>
+      {renderSheetDesktop()}
+      {renderSheetMobile()}
+    </>
   )
-}
+};
 
 CharacterSheet.propTypes = {
   onClose: PropTypes.func,

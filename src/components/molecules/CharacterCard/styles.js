@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import Text from '../../atoms/Text';
 
 const CardContainer = styled.div`
   height: 224px;
@@ -22,16 +21,24 @@ ${props => props.selected === 'true' && css`
 @media(max-width: 800px) {
   width: 255px;
   height: 223px;
+
+  ${props => props.isMiniCard === 'true' && css`
+    height: 173px;
+    width: 178px;
+  `}
 }
-
-
-
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 169px;
-  border-radius: 6px 6px 0px 0px ;
+  border-radius: 6px 6px 0px 0px;
+
+  @media(max-width: 800px) {
+  ${props => props.isMiniCard === 'true' && css`
+    height: 120px;
+  `}
+}
 `;
 
 const StyledName = styled.div`
