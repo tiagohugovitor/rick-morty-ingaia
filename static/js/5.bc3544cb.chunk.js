@@ -1,0 +1,2 @@
+(this["webpackJsonprick-morty"]=this["webpackJsonprick-morty"]||[]).push([[5],{206:function(t,r,c){"use strict";c.r(r);c(4);var i=c(24);r.default=function(){return Object(i.jsx)("div",{})}}}]);
+//# sourceMappingURL=5.bc3544cb.chunk.js.map

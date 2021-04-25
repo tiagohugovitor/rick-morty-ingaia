@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/NotFound/index.jsx"],"names":["NotFound"],"mappings":"gHAAA,wBAaeA,UAXE,WACf,OACE","file":"static/js/5.bc3544cb.chunk.js","sourcesContent":["import React from 'react';\n\nconst NotFound = () => {\n  return (\n    <div>\n    </div>\n  );\n};\n\nNotFound.propTypes = {\n\n};\n\nexport default NotFound;\n"],"sourceRoot":""}
