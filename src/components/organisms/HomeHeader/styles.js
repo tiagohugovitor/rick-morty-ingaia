@@ -23,5 +23,5 @@ const HeaderContent = styled.div`
 export {
   Logo,
   StyledSearchBar,
-  HeaderContent
-}
+  HeaderContent,
+};

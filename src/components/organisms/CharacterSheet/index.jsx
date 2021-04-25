@@ -6,7 +6,17 @@ import SheetImage from '../../molecules/SheetImage';
 import CharacterCard from '../../molecules/CharacterCard';
 import CharacterDecription from '../../molecules/CharacterDescription';
 import LocationDescription from '../../molecules/LocationDescription';
-import { SheetContainerDesktop, StyledCharacterCard, ImageBackground, StyledCloseIcon, DescriptionBackground, ColorFilter, ImageContent, Content, SheetContainerMobile } from './styles';
+import {
+  SheetContainerDesktop,
+  StyledCharacterCard,
+  ImageBackground,
+  StyledCloseIcon,
+  DescriptionBackground,
+  ColorFilter,
+  ImageContent,
+  Content,
+  SheetContainerMobile,
+} from './styles';
 
 const CharacterSheet = ({
   onClose,
@@ -21,9 +31,8 @@ const CharacterSheet = ({
   locationType,
   locationName,
   locationSubtitle,
-  locationResidents
+  locationResidents,
 }) => {
-
   const renderSheetDesktop = () => (
     <SheetContainerDesktop>
       <ImageContent>
@@ -122,7 +131,7 @@ const CharacterSheet = ({
       {renderSheetDesktop()}
       {renderSheetMobile()}
     </>
-  )
+  );
 };
 
 CharacterSheet.propTypes = {
@@ -138,7 +147,7 @@ CharacterSheet.propTypes = {
   locationType: PropTypes.string,
   locationName: PropTypes.string,
   locationSubtitle: PropTypes.string,
-  locationResidents: PropTypes.string
-}
+  locationResidents: PropTypes.string,
+};
 
 export default CharacterSheet;

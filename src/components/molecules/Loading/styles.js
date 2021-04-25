@@ -16,9 +16,9 @@ const Icon = styled.img`
   width: 184px;
   height: 184px;
   margin-bottom: 30px;
-`
+`;
 
 export {
   StyledLoading,
-  Icon
+  Icon,
 };

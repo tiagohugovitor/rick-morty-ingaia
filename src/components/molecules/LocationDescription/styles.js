@@ -47,5 +47,5 @@ export {
   StyledLocationDescriptionMobile,
   Title,
   ResidentsDecription,
-  StyledResidentsIcon
+  StyledResidentsIcon,
 };

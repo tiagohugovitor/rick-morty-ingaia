@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Dialog, DialogContent } from '@material-ui/core';
+import {Dialog, DialogContent} from '@material-ui/core';
 
 const StyledDialogContent = styled(DialogContent)`
   padding: 0px !important;
@@ -19,5 +19,5 @@ const StyledDialog = styled(Dialog)`
 
 export {
   StyledDialog,
-  StyledDialogContent
+  StyledDialogContent,
 };

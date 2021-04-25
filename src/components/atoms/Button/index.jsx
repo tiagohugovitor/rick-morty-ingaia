@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledButton } from './styles';
+import {StyledButton} from './styles';
 
 const Button = ({
   label,
@@ -9,21 +9,19 @@ const Button = ({
   disabled,
   onClick,
   fontSize,
-  fontWeight
-}) => {
-  return (
-    <StyledButton
-      id={id}
-      name={name}
-      disabled={disabled}
-      onClick={onClick}
-      fontSize={fontSize}
-      fontWeight={fontWeight}
-    >
-      {label}
-    </StyledButton>
-  )
-}
+  fontWeight,
+}) => (
+  <StyledButton
+    id={id}
+    name={name}
+    disabled={disabled}
+    onClick={onClick}
+    fontSize={fontSize}
+    fontWeight={fontWeight}
+  >
+    {label}
+  </StyledButton>
+);
 
 Button.propTypes = {
   label: PropTypes.string,
@@ -31,7 +29,8 @@ Button.propTypes = {
   name: PropTypes.string,
   onClick: PropTypes.func,
   fontSize: PropTypes.string,
-  fontWeight: PropTypes.string
-}
+  fontWeight: PropTypes.string,
+  disabled: PropTypes.bool,
+};
 
 export default Button;

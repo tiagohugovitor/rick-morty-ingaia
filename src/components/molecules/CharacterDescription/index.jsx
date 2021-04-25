@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
-import { CharacterContainer, Subtitle, Title } from './styles';
+import {CharacterContainer, Subtitle, Title} from './styles';
 
 const CharacterDecription = ({
   title,
-  characterDescription
+  characterDescription,
 }) => {
   return (
     <CharacterContainer>
@@ -26,12 +26,12 @@ const CharacterDecription = ({
         />
       </Subtitle>
     </CharacterContainer>
-  )
-}
+  );
+};
 
 CharacterDecription.propTypes = {
   title: PropTypes.string,
-  characterDescription: PropTypes.string
-}
+  characterDescription: PropTypes.string,
+};
 
 export default CharacterDecription;

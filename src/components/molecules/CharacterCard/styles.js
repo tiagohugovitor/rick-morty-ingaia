@@ -1,20 +1,24 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const CardContainer = styled.div`
   height: 224px;
   width: 224px;
   display: flex;
   flex-direction: column;
-  background: ${props => props.theme.palette.background.tertiary};
-  border: 2px solid ${props => props.theme.palette.border.primary};
+  background: ${(props) => props.theme.palette.background.tertiary};
+  border: 2px solid ${(props) => props.theme.palette.border.primary};
   box-sizing: border-box;
   border-radius: 8px;
   cursor: pointer;
 
-${props => props.selected === 'true' && css`
-  border: 2px solid ${props => props.theme.palette.primary.main};;
+${(props) => props.selected === 'true' && css`
+  border: 2px solid ${(props) => props.theme.palette.primary.main};;
   box-sizing: border-box;
-  box-shadow: 0px 0px 0px 3px ${props => props.theme.palette.primary.secondary};, 0px 0px 5px 4px ${props => props.theme.palette.primary.secondary};, inset 0px 0px 0px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: '0px 0px 0px 3px
+    ${(props) => props.theme.palette.primary.secondary};,
+    0px 0px 5px 4px ${(props) => props.theme.palette.primary.secondary};,
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.6)
+  ';
   border-radius: 8px;
 `}
 
@@ -22,7 +26,7 @@ ${props => props.selected === 'true' && css`
   width: 255px;
   height: 223px;
 
-  ${props => props.isMiniCard === 'true' && css`
+  ${(props) => props.isMiniCard === 'true' && css`
     height: 173px;
     width: 178px;
   `}
@@ -35,7 +39,7 @@ const Image = styled.img`
   border-radius: 6px 6px 0px 0px;
 
   @media(max-width: 800px) {
-  ${props => props.isMiniCard === 'true' && css`
+  ${(props) => props.isMiniCard === 'true' && css`
     height: 120px;
   `}
 }
@@ -44,9 +48,9 @@ const Image = styled.img`
 const StyledName = styled.div`
   white-space: nowrap;
   overflow: hidden;
-  color: ${props => props.theme.palette.text.white};
-  font-size: ${props => props.theme.typography.size.large};
-  font-weight: ${props => props.theme.typography.weight.bold};
+  color: ${(props) => props.theme.palette.text.white};
+  font-size: ${(props) => props.theme.typography.size.large};
+  font-weight: ${(props) => props.theme.typography.weight.bold};
   line-height: 25px;
   text-overflow: ellipsis;
 `;
@@ -68,5 +72,5 @@ export {
   Image,
   Subtitle,
   StyledSpecie,
-  StyledName
+  StyledName,
 };

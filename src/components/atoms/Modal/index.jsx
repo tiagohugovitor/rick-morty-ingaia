@@ -1,40 +1,42 @@
-import React, { forwardRef, useCallback, useState } from 'react';
+import React, {forwardRef, useCallback, useState} from 'react';
 import Slide from '@material-ui/core/Slide';
-import { makeStyles } from '@material-ui/core/styles';
-import { StyledDialog, StyledDialogContent } from './styles';
+import {makeStyles} from '@material-ui/core/styles';
+import {StyledDialog, StyledDialogContent} from './styles';
 
 const useStyles = makeStyles((theme) => ({
   dialogPaper: {
-    borderRadius: '16px'
-  }
+    borderRadius: '16px',
+  },
 }));
 
 const Transition = forwardRef((props, ref) => (
   <Slide direction="up" ref={ref} {...props} />
 ));
 
-const withModal = WrappedComponent => props => {
+Transition.displayName = 'Transition';
+
+const withModal = (WrappedComponent) => (props) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [modalData, setModalData] = useState({
     body: null,
-    bodyProps: {}
+    bodyProps: {},
   });
   const handleClose = useCallback(() => setOpen(false), []);
   const handleShow = useCallback(({
     body = null,
-    bodyProps = {}
+    bodyProps = {},
   }) => {
     setModalData({
       body,
-      bodyProps
+      bodyProps,
     });
     setOpen(true);
   }, []);
 
   const {
     body: Body,
-    bodyProps
+    bodyProps,
   } = modalData;
 
   const dialogBody = modalData.body ? (
@@ -57,7 +59,7 @@ const withModal = WrappedComponent => props => {
         showModal={handleShow}
       />
       <StyledDialog
-        PaperProps={{ classes: { root: classes.dialogPaper } }}
+        PaperProps={{classes: {root: classes.dialogPaper}}}
         disableBackdropClick={false}
         keepMounted
         maxWidth='xl'
@@ -68,7 +70,7 @@ const withModal = WrappedComponent => props => {
         {dialogBody}
       </StyledDialog>
     </>
-  )
+  );
 };
 
 export default withModal;

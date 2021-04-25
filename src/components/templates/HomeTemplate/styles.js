@@ -7,14 +7,13 @@ const HomeContainer = styled.div`
   height: auto;
   min-height: 100vh;
   width: 100%;
-  filter: ${props => props.loading === "true" ? 'blur(15px)' : 'none'};
+  filter: ${(props) => props.loading === 'true' ? 'blur(15px)' : 'none'};
 
   @media(max-width: 800px) {
     height: 100vh;
     background-size: cover;
     background-position: center;
   }
-
 `;
 
 const StyledHomeContent = styled.div`
@@ -23,7 +22,6 @@ const StyledHomeContent = styled.div`
   @media(max-width: 800px) {
     margin-top: 50px;
   }
-
 `;
 
 const StyledPagination = styled.div`
@@ -42,5 +40,5 @@ const StyledPagination = styled.div`
 export {
   HomeContainer,
   StyledHomeContent,
-  StyledPagination
+  StyledPagination,
 };

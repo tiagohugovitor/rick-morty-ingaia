@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledText } from './styles';
+import {StyledText} from './styles';
 
 const Text = ({
   text,
   color,
   size,
-  fontWeight
+  fontWeight,
 }) => {
   return (
     <StyledText
@@ -16,14 +16,14 @@ const Text = ({
     >
       {text}
     </StyledText>
-  )
+  );
 };
 
 Text.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
   size: PropTypes.string,
-  fontWeight: PropTypes.string
-}
+  fontWeight: PropTypes.string,
+};
 
 export default Text;

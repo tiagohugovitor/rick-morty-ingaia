@@ -15,9 +15,9 @@ const StyledCharacterCard = styled.div`
   @media(max-width: 800px) {
     margin: 12px;
   }
-`
+`;
 
 export {
   StyledList,
-  StyledCharacterCard
+  StyledCharacterCard,
 };

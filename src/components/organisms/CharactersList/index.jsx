@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from '../../molecules/CharacterCard';
-import { StyledList, StyledCharacterCard } from './styles';
+import {StyledList, StyledCharacterCard} from './styles';
 
 const CharactersList = ({
   characters,
-  onClickCard
+  onClickCard,
 }) => {
   return (
     <StyledList>
-      {characters.map(character => (
+      {characters.map((character) => (
         <StyledCharacterCard
           key={character.id}
         >
@@ -23,12 +23,12 @@ const CharactersList = ({
         </StyledCharacterCard>
       ))}
     </StyledList>
-  )
+  );
 };
 
 CharactersList.propTypes = {
   characters: PropTypes.array,
-  onClickCard: PropTypes.func
+  onClickCard: PropTypes.func,
 };
 
 export default CharactersList;

@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../atoms/Input';
 import Button from '../../atoms/Button';
-import { SearchBarContent, SearchBarInput, SearchBarButton } from './styles';
+import {SearchBarContent, SearchBarInput, SearchBarButton} from './styles';
 
 const SearchBar = ({
   onChange,
   onClick,
-  value
+  value,
 }) => {
   return (
     <SearchBarContent>
@@ -35,13 +35,13 @@ const SearchBar = ({
         />
       </SearchBarButton>
     </SearchBarContent>
-  )
+  );
 };
 
 SearchBar.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 export default SearchBar;

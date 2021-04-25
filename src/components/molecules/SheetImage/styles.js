@@ -19,14 +19,14 @@ const Content = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
-  background: ${props => props.theme.palette.background.tertiary};
-  border: 2px solid ${props => props.theme.palette.border.primary};
+  background: ${(props) => props.theme.palette.background.tertiary};
+  border: 2px solid ${(props) => props.theme.palette.border.primary};
   box-sizing: border-box;
   border-radius: 8px;
 `;
 
 const Image = styled.div`
-  background-image: url(${props => props.src});
+  background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -45,9 +45,9 @@ const Subtitle = styled.div`
 const StyledName = styled.div`
   white-space: nowrap;
   overflow: hidden;
-  color: ${props => props.theme.palette.text.white};
-  font-size: ${props => props.theme.typography.size.large};
-  font-weight: ${props => props.theme.typography.weight.bold};
+  color: ${(props) => props.theme.palette.text.white};
+  font-size: ${(props) => props.theme.typography.size.large};
+  font-weight: ${(props) => props.theme.typography.weight.bold};
   line-height: 25px;
   text-overflow: ellipsis;
 `;
@@ -61,5 +61,5 @@ export {
   StyledName,
   Image,
   Subtitle,
-  Content
+  Content,
 };

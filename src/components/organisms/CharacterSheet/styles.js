@@ -18,7 +18,7 @@ const ImageBackground = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url(${props => props.image});
+  background-image: url(${(props) => props.image});
   background-size: cover;
   filter: blur(15px);
   width: 100%;
@@ -32,7 +32,6 @@ const ImageBackground = styled.div`
     padding: 0px;
     border-radius: 16px 16px 0px 0px;
   }
-
 `;
 
 const ColorFilter = styled.div`
@@ -76,7 +75,7 @@ const ImageContent = styled.div`
 
 const DescriptionBackground = styled.div`
   z-index: 100;
-  background-color: ${props => props.theme.palette.black.main};
+  background-color: ${(props) => props.theme.palette.black.main};
   padding: 70px 55px;
   width: 60%;
 
@@ -106,7 +105,7 @@ const Content = styled.div`
 `;
 
 const StyledCloseIcon = styled.div`
-  color: ${props => props.theme.palette.white.main};
+  color: ${(props) => props.theme.palette.white.main};
   cursor: pointer;
 `;
 
@@ -141,5 +140,5 @@ export {
   ColorFilter,
   SheetContainerMobile,
   StyledCloseIcon,
-  StyledCharacterCard
+  StyledCharacterCard,
 };

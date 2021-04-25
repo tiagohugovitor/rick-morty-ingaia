@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
-import { CardContainer, Image, Subtitle, StyledName, StyledSpecie } from './styles';
+import {
+  CardContainer, Image, Subtitle, StyledName, StyledSpecie,
+} from './styles';
 
 const CharacterCard = ({
   characterName,
@@ -9,7 +11,7 @@ const CharacterCard = ({
   characterImage,
   onClickCard,
   isSelected,
-  isMiniCard
+  isMiniCard,
 }) => {
   return (
     <CardContainer
@@ -37,8 +39,8 @@ const CharacterCard = ({
         </StyledSpecie>
       </Subtitle>
     </CardContainer>
-  )
-}
+  );
+};
 
 CharacterCard.propTypes = {
   characterName: PropTypes.string,
@@ -46,8 +48,7 @@ CharacterCard.propTypes = {
   characterImage: PropTypes.string,
   onClickCard: PropTypes.func,
   isSelected: PropTypes.bool,
-  isMiniCard: PropTypes.bool
-
-}
+  isMiniCard: PropTypes.bool,
+};
 
 export default CharacterCard;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Text from '../../atoms/Text';
 import LoadingIcon from '../../../assets/loading-icon.svg';
-import { StyledLoading, Icon } from './styles';
+import {StyledLoading, Icon} from './styles';
 
 const Loading = () => (
   <StyledLoading>
@@ -12,6 +12,6 @@ const Loading = () => (
       size="huge"
     />
   </StyledLoading>
-)
+);
 
 export default Loading;

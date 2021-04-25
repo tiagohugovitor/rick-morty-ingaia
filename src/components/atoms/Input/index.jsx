@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledInput } from './styles';
+import {StyledInput} from './styles';
 
 const Input = ({
   id,
@@ -10,7 +10,7 @@ const Input = ({
   onChange,
   value,
   fontSize,
-  fontWeight
+  fontWeight,
 }) => (
   <StyledInput
     id={id}
@@ -32,10 +32,10 @@ Input.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.number
+    PropTypes.number,
   ]),
   fontSize: PropTypes.string,
-  fontWeight: PropTypes.string
-}
+  fontWeight: PropTypes.string,
+};
 
 export default Input;

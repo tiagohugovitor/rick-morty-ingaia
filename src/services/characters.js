@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import {gql} from '@apollo/client';
 
 const listCharacters = gql`
   query Characters($page: Int, $filter: FilterCharacter) {
@@ -36,5 +36,5 @@ const listCharacters = gql`
 `;
 
 export {
-  listCharacters
+  listCharacters,
 };

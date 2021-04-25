@@ -1,15 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
-import ResidentsIcon from '../../../assets/residents-icon.svg'
-import { LocationContainer, StyledLocationDescriptionDesktop, StyledLocationDescriptionMobile, Title, ResidentsDecription, StyledResidentsIcon } from './styles';
+import ResidentsIcon from '../../../assets/residents-icon.svg';
+import {
+  LocationContainer,
+  StyledLocationDescriptionDesktop,
+  StyledLocationDescriptionMobile,
+  Title,
+  ResidentsDecription,
+  StyledResidentsIcon,
+} from './styles';
 
 const LocationDescription = ({
   title,
   locationType,
   locationName,
   locationSubtitle,
-  locationResidents
+  locationResidents,
 }) => {
   return (
     <LocationContainer>
@@ -73,7 +80,7 @@ const LocationDescription = ({
         </ResidentsDecription>
       )}
     </LocationContainer>
-  )
+  );
 };
 
 LocationDescription.propTypes = {
@@ -81,7 +88,7 @@ LocationDescription.propTypes = {
   locationType: PropTypes.string,
   locationName: PropTypes.string,
   locationSubtitle: PropTypes.string,
-  locationResidents: PropTypes.number
-}
+  locationResidents: PropTypes.number,
+};
 
 export default LocationDescription;

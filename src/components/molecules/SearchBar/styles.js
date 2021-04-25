@@ -4,7 +4,6 @@ const SearchBarContent = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 350px;
-
 `;
 
 const SearchBarInput = styled.div`
@@ -32,5 +31,5 @@ const SearchBarButton = styled.div`
 export {
   SearchBarContent,
   SearchBarInput,
-  SearchBarButton
-}
+  SearchBarButton,
+};

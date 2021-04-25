@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SearchBar from '../../molecules/SearchBar';
-import { Logo, StyledSearchBar, HeaderContent } from './styles';
+import {Logo, StyledSearchBar, HeaderContent} from './styles';
 
 const HomeHeader = ({
   onChange,
   onClick,
-  value
+  value,
 }) => {
   return (
     <HeaderContent>
@@ -19,13 +19,13 @@ const HomeHeader = ({
         />
       </StyledSearchBar>
     </HeaderContent>
-  )
+  );
 };
 
 HomeHeader.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 export default HomeHeader;

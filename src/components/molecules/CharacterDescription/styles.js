@@ -18,5 +18,5 @@ const Subtitle = styled.div`
 export {
   CharacterContainer,
   Title,
-  Subtitle
+  Subtitle,
 };
