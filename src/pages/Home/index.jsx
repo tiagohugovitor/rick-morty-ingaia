@@ -6,6 +6,7 @@ import Loading from '../../components/molecules/Loading';
 import CharacterModal from '../../components/templates/CharacterModal';
 import HomeTemplate from '../../components/templates/HomeTemplate';
 import {listCharacters} from '../../services/characters.js';
+import {descriptionCreator} from '../../utils/descriptionCreator.js';
 
 const Home = ({
   showModal,
@@ -34,11 +35,27 @@ const Home = ({
     });
   };
 
+  const createDescription = (character) => {
+    const description = `${character.name}
+     ${descriptionCreator[character.status]?.verb}
+     a ${character?.gender.toLowerCase()} ${character?.species.toLowerCase()}.
+     ${descriptionCreator[character.gender]?.pronoum}
+     ${descriptionCreator[character.status]?.status}.
+     Last seen in
+     ${character?.episode[character?.episode.length - 1]?.air_date}.`;
+    console.log(description);
+    return description;
+  };
+
   const openCharacterSheetModal = (character) => {
+    const nemCharacter = {
+      ...character,
+      description: createDescription(character),
+    };
     showModal({
       body: CharacterModal,
       bodyProps: {
-        character: character,
+        character: nemCharacter,
       },
     });
   };

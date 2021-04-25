@@ -12,7 +12,12 @@ const listCharacters = gql`
         name
         status
         species
+        gender
         type
+        created
+        episode {
+          air_date
+        }
         origin {
           name 
           type
