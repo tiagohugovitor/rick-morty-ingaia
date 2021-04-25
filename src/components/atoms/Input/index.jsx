@@ -38,4 +38,15 @@ Input.propTypes = {
   fontWeight: PropTypes.string,
 };
 
+Input.defaultProps = {
+  id: 'input-id',
+  type: 'text',
+  name: 'input-name',
+  placeholder: '',
+  onChange: () => {},
+  value: '',
+  fontSize: 'small',
+  fontWeight: 'normal',
+};
+
 export default Input;

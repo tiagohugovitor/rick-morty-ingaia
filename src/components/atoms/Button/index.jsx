@@ -33,4 +33,14 @@ Button.propTypes = {
   disabled: PropTypes.bool,
 };
 
+Button.defaultProps = {
+  label: '',
+  id: 'button-id',
+  name: 'button-name',
+  onClick: () => {},
+  fontSize: 'small',
+  fontWeight: 'normal',
+  disabled: false,
+};
+
 export default Button;

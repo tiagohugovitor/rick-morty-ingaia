@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Input Component render correctly input component 1`] = `
+<input
+  className="sc-bdvvaa fPngCV"
+  fontSize="small"
+  fontWeight="normal"
+  id="input-id"
+  name="input-name"
+  onChange={[Function]}
+  placeholder=""
+  type="text"
+  value=""
+/>
+`;

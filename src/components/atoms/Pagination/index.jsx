@@ -36,4 +36,10 @@ Pagination.propTypes = {
   onChangePage: PropTypes.func,
 };
 
+Pagination.defaultProps = {
+  page: 1,
+  pages: 1,
+  onChangePage: () => {},
+};
+
 export default Pagination;

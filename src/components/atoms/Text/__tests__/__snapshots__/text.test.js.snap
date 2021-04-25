@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Text Component render correctly Text component 1`] = `
+<span
+  className="sc-bdvvaa hfcXKE"
+  color="white"
+  fontWeight="normal"
+  size="small"
+>
+  
+</span>
+`;

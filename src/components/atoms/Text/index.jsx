@@ -26,4 +26,11 @@ Text.propTypes = {
   fontWeight: PropTypes.string,
 };
 
+Text.defaultProps = {
+  text: '',
+  color: 'white',
+  size: 'small',
+  fontWeight: 'normal',
+};
+
 export default Text;
