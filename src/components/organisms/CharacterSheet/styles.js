@@ -8,7 +8,6 @@ const SheetContainerDesktop = styled.div`
   max-width: 1200px;
   margin-left: -20px;
   border-radius: 16px;
-  display: block;
 
   @media(max-width: 800px) {
     display: none;
