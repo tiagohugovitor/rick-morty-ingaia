@@ -6,11 +6,13 @@ const Text = ({
   text,
   color,
   size,
+  fontWeight
 }) => {
   return (
     <StyledText
       color={color}
       size={size}
+      fontWeight={fontWeight}
     >
       {text}
     </StyledText>
@@ -21,6 +23,7 @@ Text.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
   size: PropTypes.string,
+  fontWeight: PropTypes.string
 }
 
 export default Text;

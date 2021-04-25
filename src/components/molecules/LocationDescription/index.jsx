@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../atoms/Text';
 import ResidentsIcon from '../../../assets/residents-icon.svg'
-import { LocationContainer, StyledLocationDescription, ResidentsDecription, StyledResidentsIcon } from './styles';
+import { LocationContainer, StyledLocationDescription, Title, ResidentsDecription, StyledResidentsIcon } from './styles';
 
 const LocationDescription = ({
   title,
@@ -13,26 +13,32 @@ const LocationDescription = ({
 }) => {
   return (
     <LocationContainer>
-      <Text
-        text={title}
-        color="tertiary"
-        size="tiny"
-      />
+      <Title>
+        <Text
+          text={title}
+          color="tertiary"
+          size="tiny"
+          fontWeight="normal"
+        />
+      </Title>
       <StyledLocationDescription>
         <Text
           text={locationType}
           color="secondary"
           size="small"
+          fontWeight="normal"
         />
         <Text
           text={locationName}
           color="white"
           size="extra"
+          fontWeight="normal"
         />
         <Text
           text={locationSubtitle}
           color="grey"
           size="medium"
+          fontWeight="normal"
         />
       </StyledLocationDescription>
       {!!locationResidents && (
@@ -42,6 +48,7 @@ const LocationDescription = ({
             text={`${locationResidents} residents`}
             color="secondary"
             size="small"
+            fontWeight="normal"
           />
         </ResidentsDecription>
       )}

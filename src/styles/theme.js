@@ -4,6 +4,7 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: "nunito",
     size: {
+      mini: '12px',
       tiny: '13px',
       small: '14px',
       mediumSmall: '16px',
@@ -14,13 +15,14 @@ const theme = createMuiTheme({
     },
     weight: {
       light: '300',
-      normal: '500',
+      normal: '400',
       bold: '700'
     }
   },
   palette: {
     primary: {
-      main: "#CBD736"
+      main: "#CBD736",
+      secondary: "#C9D636"
     },
     text: {
       primary: "#9F9F9F",

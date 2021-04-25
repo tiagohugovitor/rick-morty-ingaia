@@ -1,16 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import MaterialPagination from '@material-ui/lab/Pagination';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& .Mui-selected': {
+      backgroundColor: 'transparent',
+      color: theme.palette.primary.main
+    },
+  }
+}));
 
 const Pagination = ({
   page,
   pages,
   onChangePage
 }) => {
+  const classes = useStyles();
+
   return (
     <MaterialPagination
       color="primary"
-      //classes
+      className={classes.root}
       count={pages}
       onChange={onChangePage}
       page={page}

@@ -4,7 +4,7 @@ import Button from '../../atoms/Button';
 import SheetImage from '../../molecules/SheetImage';
 import CharacterDecription from '../../molecules/CharacterDescription';
 import LocationDescription from '../../molecules/LocationDescription';
-import { SheetContainer, ImageBackground, DescriptionBackground, ImageContent, Content } from './styles';
+import { SheetContainer, ImageBackground, DescriptionBackground, ColorFilter, ImageContent, Content } from './styles';
 
 const CharacterSheet = ({
   onClose,
@@ -27,6 +27,7 @@ const CharacterSheet = ({
         <ImageBackground
           image={image}
         />
+        <ColorFilter />
         <Content>
           <Button
             label="Close"
@@ -34,6 +35,8 @@ const CharacterSheet = ({
             name="close-button"
             disabled={false}
             onClick={onClose}
+            fontSize="mediumSmall"
+            fontWeight="bold"
           />
           <SheetImage
             image={image}

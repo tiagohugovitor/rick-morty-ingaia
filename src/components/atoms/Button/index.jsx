@@ -7,7 +7,9 @@ const Button = ({
   id,
   name,
   disabled,
-  onClick
+  onClick,
+  fontSize,
+  fontWeight
 }) => {
   return (
     <StyledButton
@@ -15,6 +17,8 @@ const Button = ({
       name={name}
       disabled={disabled}
       onClick={onClick}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
     >
       {label}
     </StyledButton>
@@ -25,7 +29,9 @@ Button.propTypes = {
   label: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  fontSize: PropTypes.string,
+  fontWeight: PropTypes.string
 }
 
 export default Button;

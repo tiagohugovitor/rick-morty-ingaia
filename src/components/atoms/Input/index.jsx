@@ -9,18 +9,20 @@ const Input = ({
   placeholder,
   onChange,
   value,
-}) => {
-  return (
-    <StyledInput
-      id={id}
-      type={type}
-      name={name}
-      onChange={(event) => onChange(event.target.value)}
-      value={value}
-      placeholder={placeholder}
-    />
-  )
-}
+  fontSize,
+  fontWeight
+}) => (
+  <StyledInput
+    id={id}
+    type={type}
+    name={name}
+    onChange={(event) => onChange(event.target.value)}
+    value={value}
+    fontSize={fontSize}
+    fontWeight={fontWeight}
+    placeholder={placeholder}
+  />
+);
 
 Input.propTypes = {
   id: PropTypes.string,
@@ -32,6 +34,8 @@ Input.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]),
+  fontSize: PropTypes.string,
+  fontWeight: PropTypes.string
 }
 
 export default Input;

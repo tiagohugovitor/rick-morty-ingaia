@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../atoms/Input';
 import Button from '../../atoms/Button';
-import { SearchBarContent, SearchBarItem } from './styles';
+import { SearchBarContent, SearchBarInput, SearchBarButton } from './styles';
 
 const SearchBar = ({
   onChange,
@@ -11,7 +11,7 @@ const SearchBar = ({
 }) => {
   return (
     <SearchBarContent>
-      <SearchBarItem>
+      <SearchBarInput>
         <Input
           id="search-bar-input"
           type="text"
@@ -19,17 +19,21 @@ const SearchBar = ({
           placeholder="Search characters"
           onChange={onChange}
           value={value}
+          fontSize="mediumSmall"
+          fontWeight="bold"
         />
-      </SearchBarItem>
-      <SearchBarItem>
+      </SearchBarInput>
+      <SearchBarButton>
         <Button
           label="Search"
           id="search-bar-button"
           name="search-characters-button"
           disabled={false}
           onClick={onClick}
+          fontSize="mediumSmall"
+          fontWeight="bold"
         />
-      </SearchBarItem>
+      </SearchBarButton>
     </SearchBarContent>
   )
 };

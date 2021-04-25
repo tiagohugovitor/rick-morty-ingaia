@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Pagination from '../../atoms/Pagination';
 import HomeHeader from '../../organisms/HomeHeader';
 import CharactersList from '../../organisms/CharactersList';
-import { HomeContainer, StyledHomeHeader, StyledHomeContent } from './styles';
+import { HomeContainer, StyledHomeContent, StyledPagination } from './styles';
 
 const HomeTemplate = ({
   onChange,
@@ -23,13 +23,11 @@ const HomeTemplate = ({
     <HomeContainer
       loading={loading ? 'true' : 'false'}
     >
-      <StyledHomeHeader>
-        <HomeHeader
-          onChange={onChange}
-          onClick={onClickSearch}
-          value={value}
-        />
-      </StyledHomeHeader>
+      <HomeHeader
+        onChange={onChange}
+        onClick={onClickSearch}
+        value={value}
+      />
       <StyledHomeContent>
         {hasContent() && (
           <>
@@ -37,11 +35,13 @@ const HomeTemplate = ({
               onClickCard={onClickCard}
               characters={searchResult}
             />
-            <Pagination
-              page={page}
-              pages={pages}
-              onChangePage={onChangePage}
-            />
+            <StyledPagination>
+              <Pagination
+                page={page}
+                pages={pages}
+                onChangePage={onChangePage}
+              />
+            </StyledPagination>
           </>
         )}
       </StyledHomeContent>

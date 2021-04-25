@@ -8,11 +8,15 @@ const StyledInput = styled.input`
   padding: 10px 14px;
   background: transparent;
   font-style: normal;
-  font-weight: bold;
-  font-size: ${props => props.theme.typography.size.medium};
+  font-weight: ${props => props.theme.typography.weight[props.fontWeight]};
+  font-size: ${props => props.theme.typography.size[props.fontSize]};
   line-height: 22px;
-`;
+  width: 100%;
 
+  &:focus {
+    outline: none;
+  }
+`;
 
 export {
   StyledInput,

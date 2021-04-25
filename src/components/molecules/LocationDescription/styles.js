@@ -13,6 +13,11 @@ const StyledLocationDescription = styled.div`
 
 `;
 
+const Title = styled.div`
+  letter-spacing: 0.65em;
+  line-height: 18px;
+`;
+
 const ResidentsDecription = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,6 +31,7 @@ const StyledResidentsIcon = styled.img`
 export {
   LocationContainer,
   StyledLocationDescription,
+  Title,
   ResidentsDecription,
   StyledResidentsIcon
 };

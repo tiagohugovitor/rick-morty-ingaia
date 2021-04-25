@@ -52,6 +52,7 @@ const withModal = WrappedComponent => props => {
       <Dialog
         disableBackdropClick={false}
         keepMounted
+        maxWidth='xl'
         open={open}
         onClose={handleClose}
         TransitionComponent={Transition}

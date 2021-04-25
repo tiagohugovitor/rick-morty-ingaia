@@ -18,6 +18,7 @@ const CharactersList = ({
             characterName={character?.name}
             characterType={character?.species}
             characterImage={character?.image}
+            isSelected={false}
           />
         </StyledCharacterCard>
       ))}
