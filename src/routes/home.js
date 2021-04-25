@@ -4,7 +4,7 @@ const HomeComponent = lazy(() => import('../pages/Home'));
 
 const Home = [
   {
-    path: '/',
+    path: '/rick-morty-ingaia',
     name: 'home',
     exact: true,
     component: HomeComponent,
