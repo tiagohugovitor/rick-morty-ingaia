@@ -15,7 +15,10 @@ const Home = ({
     page: 1,
     pages: 0,
   });
-  const [runQuery, {data, loading}] = useLazyQuery(listCharacters);
+  const [runQuery, {data, loading}] = useLazyQuery(
+      listCharacters,
+      {errorPolicy: 'all'},
+  );
 
   useEffect(() => {
     const newPages = data?.characters?.info.pages;
