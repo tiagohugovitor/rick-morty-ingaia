@@ -12,6 +12,7 @@ const Home = ({
   showModal,
 }) => {
   const [searchCharacters, setSearchCharacters] = useState('');
+  const [emptyResult, setEmptyResult] = useState(false);
   const [pagination, setPagination] = useState({
     page: 1,
     pages: 0,
@@ -23,9 +24,11 @@ const Home = ({
 
   useEffect(() => {
     const newPages = data?.characters?.info.pages;
+    const results = data?.characters;
     if (newPages !== pagination.pages) {
       setPagination((state) => ({...state, pages: newPages}));
     }
+    data && !results ? setEmptyResult(true) : setEmptyResult(false);
   }, [data, pagination.pages]);
 
   const onSearch = (newPage, filter) => {
@@ -74,6 +77,7 @@ const Home = ({
         onClickCard={openCharacterSheetModal}
         value={searchCharacters}
         searchResult={data?.characters?.results || []}
+        emptyResult={emptyResult}
         page={pagination.page}
         pages={pagination.pages}
         onChangePage={onChangePage}

@@ -37,8 +37,13 @@ const StyledPagination = styled.div`
   }
 `;
 
+const NotFound = styled.div`
+  text-align: center;
+`;
+
 export {
   HomeContainer,
   StyledHomeContent,
   StyledPagination,
+  NotFound,
 };

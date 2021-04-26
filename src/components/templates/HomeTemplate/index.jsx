@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Pagination from '../../atoms/Pagination';
 import HomeHeader from '../../organisms/HomeHeader';
 import CharactersList from '../../organisms/CharactersList';
-import {HomeContainer, StyledHomeContent, StyledPagination} from './styles';
+import Text from '../../atoms/Text';
+import {HomeContainer, StyledHomeContent, StyledPagination, NotFound} from './styles';
 
 const HomeTemplate = ({
   onChange,
@@ -15,6 +16,7 @@ const HomeTemplate = ({
   page,
   pages,
   onChangePage,
+  emptyResult,
 }) => {
   const hasContent = () => !!searchResult?.length;
 
@@ -43,6 +45,16 @@ const HomeTemplate = ({
             </StyledPagination>
           </>
         )}
+        {emptyResult && (
+          <NotFound>
+            <Text
+              text="Characters Not Found"
+              color="tertiary"
+              size="mediumSmall"
+              fontWeight="normal"
+            />
+          </NotFound>
+        )}
       </StyledHomeContent>
     </HomeContainer>
   );
@@ -58,6 +70,7 @@ HomeTemplate.propTypes = {
   page: PropTypes.number,
   pages: PropTypes.number,
   onChangePage: PropTypes.func,
+  emptyResult: PropTypes.bool,
 };
 
 export default HomeTemplate;
