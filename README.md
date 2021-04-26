@@ -1,6 +1,6 @@
 # Rick and Morty Challenge
 
-This is a website developed to inGaia front-end challenge. The project is build using React. The application is available on prodution mode in [https://tiagohugovitor.github.io/rick-morty-ingaia/] (https://tiagohugovitor.github.io/rick-morty-ingaia/).
+This is a website developed to inGaia front-end challenge. The project is build using React. The application is available on prodution mode in [https://tiagohugovitor.github.io/rick-morty-ingaia/](https://tiagohugovitor.github.io/rick-morty-ingaia/).
 
 ## Running project
 
@@ -33,4 +33,4 @@ The build is minified and the filenames include the hashes.\
 
 ## CI/CD
 
-The project uses Github Pages to be available on [https://tiagohugovitor.github.io/rick-morty-ingaia/] (https://tiagohugovitor.github.io/rick-morty-ingaia/). It also has a Github action trigger to make automatically deploy, generating a CI/CD build. The deploy is triggered when there are modifications on the branch *master*.
+The project uses Github Pages to be available on [https://tiagohugovitor.github.io/rick-morty-ingaia/](https://tiagohugovitor.github.io/rick-morty-ingaia/). It also has a Github action trigger to make automatically deploy, generating a CI/CD build. The deploy is triggered when there are modifications on the branch *master*.
