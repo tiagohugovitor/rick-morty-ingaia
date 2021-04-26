@@ -18,6 +18,7 @@ module.exports = {
     'react',
   ],
   'rules': {
-    'max-len': 0
+    'max-len': 0,
+    'linebreak-style': 0,
   },
 };
