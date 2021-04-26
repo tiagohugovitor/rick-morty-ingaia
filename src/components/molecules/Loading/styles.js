@@ -18,7 +18,29 @@ const Icon = styled.img`
   margin-bottom: 30px;
 `;
 
+const AnimationText = styled.div`
+  overflow: hidden;
+  border-right: .15em solid ${(props) => props.theme.palette.primary.main};
+  white-space: nowrap;
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation:
+    typing 2.5s steps(20, end) infinite,
+    blink-caret .75s step-end infinite;
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 110px }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: ${(props) => props.theme.palette.primary.main}; }
+  }
+`;
+
 export {
   StyledLoading,
   Icon,
+  AnimationText,
 };
