@@ -18,7 +18,7 @@ const SheetImage = ({
   return (
     <StyledCard>
       <Content>
-        <Image src={image} />
+        <Image alt={`${name} image`} src={image} />
         <Subtitle>
           <StyledName>
             <Text

@@ -12,6 +12,7 @@ const Button = ({
   fontWeight,
 }) => (
   <StyledButton
+    aria-label={label}
     id={id}
     name={name}
     disabled={disabled}

@@ -70,7 +70,7 @@ const LocationDescription = ({
       </StyledLocationDescriptionMobile>
       {!!locationResidents && (
         <ResidentsDecription>
-          <StyledResidentsIcon src={ResidentsIcon} />
+          <StyledResidentsIcon alt="Residents Icon" src={ResidentsIcon} />
           <Text
             text={`${locationResidents} residents`}
             color="secondary"

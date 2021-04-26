@@ -10,7 +10,7 @@ const HomeHeader = ({
 }) => {
   return (
     <HeaderContent>
-      <Logo src="../../../../rick-morty-ingaia/assets/logo.svg"/>
+      <Logo alt="Rick and Morty logo" src="../../../../rick-morty-ingaia/assets/logo.svg"/>
       <StyledSearchBar>
         <SearchBar
           onChange={onChange}

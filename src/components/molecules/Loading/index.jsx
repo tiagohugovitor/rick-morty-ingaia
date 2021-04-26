@@ -5,7 +5,7 @@ import {StyledLoading, Icon, AnimationText} from './styles';
 
 const Loading = () => (
   <StyledLoading>
-    <Icon src={LoadingIcon} />
+    <Icon alt="Loading Rick and Morty image" src={LoadingIcon} />
     <AnimationText>
       <Text
         text="Loading"

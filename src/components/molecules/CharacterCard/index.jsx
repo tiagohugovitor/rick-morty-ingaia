@@ -19,7 +19,7 @@ const CharacterCard = ({
       selected={isSelected ? 'true' : 'false'}
       isMiniCard={isMiniCard ? 'true' : 'false'}
     >
-      <Image src={characterImage} isMiniCard={isMiniCard ? 'true' : 'false'} />
+      <Image alt={`${characterName} image`} src={characterImage} isMiniCard={isMiniCard ? 'true' : 'false'} />
       <Subtitle >
         <StyledName>
           <Text

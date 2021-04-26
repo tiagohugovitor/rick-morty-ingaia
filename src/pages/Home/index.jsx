@@ -46,7 +46,6 @@ const Home = ({
      ${descriptionCreator[character.status]?.status}.
      Last seen in
      ${character?.episode[character?.episode.length - 1]?.air_date}.`;
-    console.log(description);
     return description;
   };
 

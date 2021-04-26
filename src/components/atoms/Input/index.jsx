@@ -13,6 +13,7 @@ const Input = ({
   fontWeight,
 }) => (
   <StyledInput
+    aria-label={placeholder}
     id={id}
     type={type}
     name={name}

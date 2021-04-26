@@ -2,6 +2,7 @@
 
 exports[`Render Input Component render correctly input component 1`] = `
 <input
+  aria-label=""
   className="sc-bdvvaa fPngCV"
   fontSize="small"
   fontWeight="normal"

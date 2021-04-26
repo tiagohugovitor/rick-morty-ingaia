@@ -2,6 +2,7 @@
 
 exports[`Render Button Component render correctly button component 1`] = `
 <button
+  aria-label=""
   className="sc-bdvvaa fPfsNP"
   disabled={false}
   fontSize="small"
