@@ -39,11 +39,13 @@ const Home = ({
   };
 
   const createDescription = (character) => {
+    console.log(character);
     const description = `${character.name}
      ${descriptionCreator[character.status]?.verb}
      a ${character?.gender.toLowerCase()} ${character?.species.toLowerCase()}.
-     ${descriptionCreator[character.gender]?.pronoum}
-     ${descriptionCreator[character.status]?.status}.
+     ${character.status === 'unknown' ?
+      `It can't be told if ${descriptionCreator[character.gender]?.pronoum.toLowerCase()} is alive or dead.` :
+      `${descriptionCreator[character.gender]?.pronoum} ${descriptionCreator[character.status]?.status}.`}
      Last seen in
      ${character?.episode[character?.episode.length - 1]?.air_date}.`;
     return description;

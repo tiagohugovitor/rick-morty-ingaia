@@ -5,6 +5,9 @@ const descriptionCreator = {
   Female: {
     pronoum: 'She',
   },
+  unknown: {
+    verb: 'is',
+  },
   Dead: {
     verb: 'was',
     status: 'is dead',
